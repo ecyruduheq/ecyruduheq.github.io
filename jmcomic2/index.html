@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jmcomic2官网下载-JMComic2最新版安装包与使用指南</title>
+    <meta name="description" content="jmcomic2官网下载页面，提供JMComic2最新版本安卓及iOS安装包下载指引、安装步骤、常见问题解答与安全使用说明，帮助用户快速获取官方正版应用。">
+    <meta name="keywords" content="jmcomic2官网下载,jmcomic2下载,jmcomic2最新版,jmcomic2安装包,jmcomic2安卓下载,jmcomic2使用教程">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f5f7fb;
+            color: #1a1e2b;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部 */
+        .site-header {
+            background: #ffffff;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+            flex-wrap: wrap;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2b3a67;
+            letter-spacing: 0.5px;
+        }
+        .logo-icon {
+            background: linear-gradient(135deg, #4a6cf7, #6c63ff);
+            color: #fff;
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 18px;
+            box-shadow: 0 4px 10px rgba(74, 108, 247, 0.25);
+        }
+        .main-nav {
+            display: flex;
+            gap: 28px;
+            font-weight: 500;
+            font-size: 15px;
+            color: #333;
+        }
+        .main-nav a {
+            padding: 6px 2px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+        .main-nav a:hover, .main-nav a.active {
+            color: #4a6cf7;
+            border-bottom-color: #4a6cf7;
+        }
+        .header-btn {
+            background: linear-gradient(135deg, #4a6cf7, #6c63ff);
+            color: #fff;
+            padding: 10px 22px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(74, 108, 247, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .header-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(74, 108, 247, 0.4);
+        }
+
+        /* Hero 首屏 */
+        .hero {
+            background: linear-gradient(145deg, #eef2ff 0%, #f8faff 100%);
+            padding: 80px 0 70px;
+            border-bottom: 1px solid #e6eaf2;
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .hero-content h1 {
+            font-size: 40px;
+            font-weight: 800;
+            line-height: 1.25;
+            color: #1a2340;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+        .hero-content h1 span {
+            color: #4a6cf7;
+            position: relative;
+        }
+        .hero-desc {
+            font-size: 17px;
+            color: #4a5168;
+            margin-bottom: 28px;
+            max-width: 560px;
+        }
+        .hero-btns {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        .btn-primary {
+            background: #4a6cf7;
+            color: #fff;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 8px 25px rgba(74, 108, 247, 0.35);
+            transition: all 0.3s;
+        }
+        .btn-primary:hover {
+            background: #3a5bd9;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(74, 108, 247, 0.45);
+        }
+        .btn-secondary {
+            background: #ffffff;
+            color: #2b3a67;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 16px;
+            border: 1.5px solid #d0d7e5;
+            transition: all 0.3s;
+        }
+        .btn-secondary:hover {
+            border-color: #4a6cf7;
+            color: #4a6cf7;
+            background: #fafbff;
+        }
+        .hero-meta {
+            display: flex;
+            gap: 24px;
+            font-size: 14px;
+            color: #6b7280;
+        }
+        .hero-meta i {
+            font-style: normal;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .hero-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+            border: 1px solid #eef2f9;
+            text-align: center;
+        }
+        .hero-card-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            background: linear-gradient(145deg, #4a6cf7, #7b6cf0);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            color: #fff;
+            box-shadow: 0 10px 25px rgba(74, 108, 247, 0.3);
+        }
+        .hero-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a2340;
+            margin-bottom: 8px;
+        }
+        .version-tag {
+            display: inline-block;
+            background: #eef2ff;
+            color: #4a6cf7;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            margin: 8px 0 15px;
+        }
+        .card-stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 18px;
+            padding-top: 18px;
+            border-top: 1px solid #f0f2f7;
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 22px;
+            font-weight: 800;
+            color: #1a2340;
+        }
+        .stat-label {
+            font-size: 13px;
+            color: #9aa1b5;
+            margin-top: 2px;
+        }
+
+        /* 下载区域 */
+        .download-section {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+        .section-title h2 {
+            font-size: 34px;
+            font-weight: 800;
+            color: #1a2340;
+            letter-spacing: -0.5px;
+        }
+        .section-title p {
+            color: #6b7280;
+            font-size: 16px;
+            margin-top: 12px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .download-card {
+            background: #f8faff;
+            border-radius: 20px;
+            padding: 35px 25px;
+            text-align: center;
+            border: 1px solid #e8ecf5;
+            transition: all 0.3s;
+        }
+        .download-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+        }
+        .download-card .platform-icon {
+            font-size: 42px;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .download-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a2340;
+            margin-bottom: 8px;
+        }
+        .download-card .version-info {
+            font-size: 14px;
+            color: #7c839a;
+            margin-bottom: 18px;
+        }
+        .download-btn {
+            background: #ffffff;
+            border: 2px solid #4a6cf7;
+            color: #4a6cf7;
+            font-weight: 700;
+            padding: 10px 30px;
+            border-radius: 30px;
+            font-size: 15px;
+            transition: all 0.3s;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .download-btn:hover {
+            background: #4a6cf7;
+            color: #fff;
+        }
+        .card-note {
+            font-size: 13px;
+            color: #9aa1b5;
+            margin-top: 12px;
+        }
+
+        /* 功能特点 */
+        .features-section {
+            padding: 80px 0;
+            background: #f5f7fb;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .feature-item {
+            display: flex;
+            gap: 20px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            border: 1px solid #edf0f8;
+            transition: all 0.2s;
+        }
+        .feature-item:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+        }
+        .feature-icon {
+            width: 55px;
+            height: 55px;
+            flex-shrink: 0;
+            border-radius: 14px;
+            background: linear-gradient(145deg, #eef2ff, #e4e9ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+        }
+        .feature-text h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a2340;
+            margin-bottom: 6px;
+        }
+        .feature-text p {
+            font-size: 15px;
+            color: #5a6072;
+            line-height: 1.6;
+        }
+
+        /* 安装教程 */
+        .tutorial-section {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+        .tutorial-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-top: 20px;
+        }
+        .step-card {
+            text-align: center;
+            padding: 30px 20px;
+            background: #fafbff;
+            border-radius: 16px;
+            border: 1px solid #edf0f8;
+            position: relative;
+        }
+        .step-number {
+            width: 42px;
+            height: 42px;
+            background: #4a6cf7;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+            margin: 0 auto 15px;
+            box-shadow: 0 6px 15px rgba(74, 108, 247, 0.3);
+        }
+        .step-card h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1a2340;
+            margin-bottom: 8px;
+        }
+        .step-card p {
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        /* FAQ */
+        .faq-section {
+            padding: 80px 0;
+            background: #f5f7fb;
+        }
+        .faq-list {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: #ffffff;
+            border-radius: 14px;
+            margin-bottom: 15px;
+            padding: 0;
+            border: 1px solid #e8ecf5;
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 20px 25px;
+            font-weight: 600;
+            font-size: 16px;
+            color: #1a2340;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            transition: background 0.2s;
+        }
+        .faq-question:hover {
+            background: #fafbff;
+        }
+        .faq-question .arrow {
+            color: #4a6cf7;
+            font-size: 20px;
+            font-weight: 400;
+            transition: transform 0.3s;
+        }
+        .faq-item.open .faq-question .arrow {
+            transform: rotate(45deg);
+        }
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s;
+            color: #5a6072;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        .faq-item.open .faq-answer {
+            padding: 0 25px 20px;
+            max-height: 300px;
+        }
+
+        /* 注意事项 */
+        .notice-section {
+            padding: 60px 0;
+            background: #ffffff;
+        }
+        .notice-box {
+            background: #fff8ed;
+            border-left: 5px solid #f0a020;
+            padding: 25px 30px;
+            border-radius: 0 14px 14px 0;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .notice-box h3 {
+            color: #8b5e00;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .notice-box ul {
+            padding-left: 20px;
+            color: #6b5a2e;
+        }
+        .notice-box li {
+            margin-bottom: 5px;
+        }
+
+        /* 页脚 */
+        .site-footer {
+            background: #1a2340;
+            color: #b0b8d0;
+            padding: 50px 0 30px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-about h3 {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .footer-about p {
+            font-size: 14px;
+            line-height: 1.7;
+        }
+        .footer-links h4 {
+            color: #fff;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .footer-links ul {
+            list-style: none;
+        }
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+        .footer-links a {
+            font-size: 14px;
+            color: #b0b8d0;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover {
+            color: #fff;
+        }
+        .copyright {
+            text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid #2e3a5e;
+            font-size: 14px;
+            color: #8a92ac;
+        }
+
+        /* 响应式 */
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero-content h1 {
+                font-size: 34px;
+            }
+            .hero-desc {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .hero-btns {
+                justify-content: center;
+            }
+            .hero-meta {
+                justify-content: center;
+            }
+            .download-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .tutorial-steps {
+                grid-template-columns: 1fr 1fr;
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 12px;
+            }
+            .main-nav {
+                gap: 18px;
+                font-size: 14px;
+            }
+            .download-grid {
+                grid-template-columns: 1fr;
+            }
+            .tutorial-steps {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .hero {
+                padding: 50px 0;
+            }
+            .hero-content h1 {
+                font-size: 28px;
+            }
+            .section-title h2 {
+                font-size: 28px;
+            }
+        }
+        @media (max-width: 480px) {
+            .main-nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+    <!-- 头部 -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <div class="logo-icon">J</div>
+                <span>JMComic2</span>
+            </div>
+            <nav class="main-nav">
+                <a href="#home" class="active">首页</a>
+                <a href="#download">下载</a>
+                <a href="#features">功能</a>
+                <a href="#tutorial">教程</a>
+                <a href="#faq">常见问题</a>
+            </nav>
+            <a href="#download" class="header-btn">立即下载</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero 首屏 -->
+        <section class="hero" id="home">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <h1>JMComic2 官网下载<br><span>最新版安装包</span></h1>
+                    <p class="hero-desc">
+                        JMComic2 是一款深受漫画爱好者青睐的阅读工具，提供丰富的高清漫画资源、简洁的阅读界面和流畅的浏览体验。本页面为 JMComic2 官方下载入口，提供安卓版与 iOS 版最新安装包，并附详细安装教程与常见问题解答。
+                    </p>
+                    <div class="hero-btns">
+                        <a href="#download" class="btn-primary">📥 下载 JMComic2</a>
+                        <a href="#tutorial" class="btn-secondary">📖 安装教程</a>
+                    </div>
+                    <div class="hero-meta">
+                        <i>✅ 官方正版</i>
+                        <i>🔄 持续更新</i>
+                        <i>🔒 安全无毒</i>
+                    </div>
+                </div>
+                <div class="hero-card">
+                    <div class="hero-card-icon">📱</div>
+                    <h3>JMComic2</h3>
+                    <div class="version-tag">v2.6.8 最新版</div>
+                    <p style="font-size: 14px; color: #7c839a;">更新时间：2025年1月</p>
+                    <div class="card-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">500万+</div>
+                            <div class="stat-label">用户下载</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">4.8</div>
+                            <div class="stat-label">应用评分</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 下载区域 -->
+        <section class="download-section" id="download">
+            <div class="container">
+                <div class="section-title">
+                    <h2>选择适合您的版本下载</h2>
+                    <p>根据您的设备类型，选择对应的 JMComic2 安装包。所有版本均经过安全检测，请放心下载使用。</p>
+                </div>
+                <div class="download-grid">
+                    <div class="download-card">
+                        <span class="platform-icon">📱</span>
+                        <h3>Android 版</h3>
+                        <div class="version-info">支持 Android 7.0 及以上系统</div>
+                        <a href="#" class="download-btn">下载 APK 安装包</a>
+                        <div class="card-note">文件大小：约 35 MB</div>
+                    </div>
+                    <div class="download-card">
+                        <span class="platform-icon">🍎</span>
+                        <h3>iOS 版</h3>
+                        <div class="version-info">支持 iOS 12.0 及以上系统</div>
+                        <a href="#" class="download-btn">下载 TestFlight 版</a>
+                        <div class="card-note">需通过 TestFlight 安装</div>
+                    </div>
+                    <div class="download-card">
+                        <span class="platform-icon">💻</span>
+                        <h3>Windows 版</h3>
+                        <div class="version-info">支持 Windows 10/11 系统</div>
+                        <a href="#" class="download-btn">下载桌面客户端</a>
+                        <div class="card-note">文件大小：约 48 MB</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 功能特点 -->
+        <section class="features-section" id="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>JMComic2 核心功能</h2>
+                    <p>丰富功能带来更舒适的漫画阅读体验</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">📚</div>
+                        <div class="feature-text">
+                            <h3>海量漫画资源</h3>
+                            <p>收录国内外海量热门漫画，涵盖日漫、国漫、韩漫等全品类，实时更新最新章节，满足不同读者偏好。</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🖥️</div>
+                        <div class="feature-text">
+                            <h3>高清阅读体验</h3>
+                            <p>支持高清原图加载，图片压缩率低，配合智能分页与预加载机制，翻页流畅无卡顿。</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🌙</div>
+                        <div class="feature-text">
+                            <h3>夜间模式</h3>
+                            <p>内置夜间护眼模式，在暗光环境下自动调整亮度，减少长时间阅读带来的视觉疲劳。</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📥</div>
+                        <div class="feature-text">
+                            <h3>离线缓存</h3>
+                            <p>支持单话或整部漫画离线缓存，无网络环境下也能随时阅读，通勤路上不再寂寞。</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🔍</div>
+                        <div class="feature-text">
+                            <h3>智能搜索与分类</h3>
+                            <p>提供精准的搜索功能及多维度的漫画分类，快速找到您感兴趣的作品，支持按热度、更新时间排序。</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">❤️</div>
+                        <div class="feature-text">
+                            <h3>个性化书架</h3>
+                            <p>支持收藏、历史记录、最近阅读等管理功能，打造专属个人书架，追更从未如此简单。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 安装教程 -->
+        <section class="tutorial-section" id="tutorial">
+            <div class="container">
+                <div class="section-title">
+                    <h2>JMComic2 安装教程</h2>
+                    <p>按照以下步骤即可快速完成安装，不同平台略有差异</p>
+                </div>
+                <div class="tutorial-steps">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>下载安装包</h3>
+                        <p>根据您的设备点击上方对应下载按钮，获取 JMComic2 安装文件。</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>允许未知来源</h3>
+                        <p>安卓用户需在设置中开启“允许安装未知来源应用”权限（iOS 用户无需此步）。</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>完成安装</h3>
+                        <p>打开下载好的 APK 或 TestFlight 链接，按照提示点击“安装”并等待完成。</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <h3>启动应用</h3>
+                        <p>安装完成后，在桌面找到 JMComic2 图标，点击启动即可开始阅读。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见问题解答</h2>
+                    <p>安装或使用过程中遇到问题？看看这里是否有答案</p>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item open">
+                        <div class="faq-question">
+                            <span>JMComic2 是官方正版应用吗？</span>
+                            <span class="arrow">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            JMComic2 是一款由第三方开发者团队研发的漫画阅读工具。本页面为开发者指定的分发渠道，提供最新、最安全的官方版本安装包，请放心下载。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>安装时提示“未知来源”怎么办？</span>
+                            <span class="arrow">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            安卓系统默认禁止安装非应用商店的应用。您可以在“设置 → 安全与隐私”中，开启“允许安装未知应用”权限，或直接允许浏览器安装应用。安装完成后建议关闭该权限以确保安全。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>JMComic2 会收取费用吗？</span>
+                            <span class="arrow">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            目前 JMComic2 的基础阅读功能完全免费，部分高级功能（如去广告）可能需要通过积分或会员解锁。具体以应用内说明为准。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>为什么部分漫画加载缓慢？</span>
+                            <span class="arrow">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            漫画加载速度受网络环境、服务器状态及漫画资源大小影响。建议切换至更稳定的 Wi-Fi 网络，或尝试清除应用缓存后重新加载。若仍无法解决，可尝试更换画质模式。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>如何获取版本更新通知？</span>
+                            <span class="arrow">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            建议您关注本官网，每次发布新版本我们都会在首页更新下载链接。应用内也会在启动时检查更新，并推送升级提醒。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 注意事项 -->
+        <section class="notice-section">
+            <div class="container">
+                <div class="notice-box">
+                    <h3>📌 安全提醒</h3>
+                    <ul>
+                        <li>请务必从本官网或官方认证渠道下载 JMComic2，避免使用来路不明的破解版或修改版，以免造成隐私泄露或财产损失。</li>
+                        <li>安装或使用过程中，请勿授予不必要的高危权限，例如短信读取、通讯录访问等。</li>
+                        <li>建议定期更新至最新版本，以获得更好的功能体验与安全保护。</li>
+                        <li>如遇到下载链接失效或安装问题，请通过页面底部联系方式与我们取得联系。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>关于 JMComic2</h3>
+                    <p>JMComic2 是一款专注于漫画阅读的免费应用，致力于为用户提供便捷、舒适的阅读体验。我们持续优化产品性能，丰富内容资源，让每一位漫画爱好者都能找到属于自己的快乐。</p>
+                </div>
+                <div class="footer-links">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#download">版本下载</a></li>
+                        <li><a href="#features">功能特性</a></li>
+                        <li><a href="#tutorial">安装教程</a></li>
+                        <li><a href="#faq">帮助中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><a href="#">客服邮箱：support@jmcomic2.com</a></li>
+                        <li><a href="#">官方社区</a></li>
+                        <li><a href="#">意见建议</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 JMComic2 官方网站 · 本页面为官方下载入口 · 请通过正规渠道下载使用</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ 折叠交互
+        document.querySelectorAll('.faq-item').forEach(function(item) {
+            var question = item.querySelector('.faq-question');
+            question.addEventListener('click', function() {
+                var isOpen = item.classList.contains('open');
+                // 关闭所有
+                document.querySelectorAll('.faq-item').forEach(function(el) {
+                    el.classList.remove('open');
+                });
+                // 如果之前没开，则打开当前
+                if (!isOpen) {
+                    item.classList.add('open');
+                }
+            });
+        });
+    </script>
+
+</body>
+  </html>
