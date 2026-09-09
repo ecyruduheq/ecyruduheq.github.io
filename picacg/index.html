@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PicACG官方下载-最新版本安装指南与使用说明</title>
+    <meta name="description" content="PicACG官方下载页面提供最新版本安装包下载指引、功能特性介绍、使用教程及常见问题解答，帮助用户安全获取并顺利使用PicACG应用。">
+    <meta name="keywords" content="PicACG官方下载,PicACG下载,PicACG,哔咔漫画下载,漫画阅读器">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #f4f6fa;
+            color: #1a1e2c;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* 头部 */
+        .site-header {
+            background: linear-gradient(135deg, #1b2a6b 0%, #2d4a9e 100%);
+            padding: 16px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo-icon {
+            background: #ffb347;
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1b2a6b;
+            font-weight: 800;
+            font-size: 22px;
+        }
+        .logo-text {
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            gap: 28px;
+        }
+        .main-nav a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.2s;
+        }
+        .main-nav a:hover {
+            color: #ffb347;
+        }
+        /* 主banner */
+        .hero-section {
+            background: linear-gradient(145deg, #eef2ff 0%, #dbe4ff 100%);
+            padding: 56px 0 48px;
+            border-bottom: 1px solid #d0d9f0;
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .hero-title {
+            font-size: 38px;
+            font-weight: 800;
+            background: linear-gradient(90deg, #1b2a6b, #3b5bbf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        .hero-sub {
+            font-size: 18px;
+            color: #2c3a5e;
+            margin-bottom: 24px;
+            max-width: 600px;
+        }
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .btn-download {
+            background: #ff6b35;
+            color: #fff;
+            padding: 14px 36px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 18px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(255,107,53,0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: inline-block;
+        }
+        .btn-download:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255,107,53,0.4);
+        }
+        .btn-info {
+            background: transparent;
+            color: #1b2a6b;
+            padding: 12px 28px;
+            border-radius: 40px;
+            font-weight: 600;
+            text-decoration: none;
+            border: 2px solid #1b2a6b;
+            transition: all 0.2s;
+        }
+        .btn-info:hover {
+            background: #1b2a6b;
+            color: #fff;
+        }
+        .hero-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 28px;
+            box-shadow: 0 12px 30px rgba(27,42,107,0.12);
+            text-align: center;
+        }
+        .hero-card h3 {
+            font-size: 20px;
+            margin-bottom: 14px;
+            color: #1b2a6b;
+        }
+        .version-tag {
+            background: #e9efff;
+            border-radius: 30px;
+            padding: 12px 20px;
+            font-weight: 700;
+            color: #1b2a6b;
+            font-size: 18px;
+            margin-bottom: 18px;
+            display: inline-block;
+        }
+        .card-meta {
+            color: #5a6a8a;
+            font-size: 14px;
+            margin-top: 15px;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+        /* 信息条 */
+        .feature-strip {
+            background: #ffffff;
+            padding: 24px 0;
+            border-bottom: 1px solid #e8ecf5;
+        }
+        .strip-grid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .strip-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            color: #1b2a6b;
+        }
+        .strip-icon {
+            background: #e3eaff;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+        /* 栏目 */
+        .section {
+            padding: 50px 0;
+        }
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a1e2c;
+            margin-bottom: 36px;
+            position: relative;
+            padding-left: 18px;
+        }
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 6px;
+            width: 6px;
+            height: 28px;
+            background: #ff6b35;
+            border-radius: 6px;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+        .feature-item {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .feature-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+        .feature-item h3 {
+            font-size: 19px;
+            margin-bottom: 12px;
+            color: #1b2a6b;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .feature-icon {
+            font-size: 26px;
+        }
+        .feature-item p {
+            color: #4a5468;
+            font-size: 15px;
+        }
+        /* 下载步骤 */
+        .steps-section {
+            background: #ffffff;
+        }
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            counter-reset: step;
+        }
+        .step-card {
+            text-align: center;
+            padding: 30px 20px;
+            background: #f9faff;
+            border-radius: 16px;
+            position: relative;
+        }
+        .step-num {
+            width: 48px;
+            height: 48px;
+            background: #ff6b35;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0 auto 18px;
+        }
+        .step-card h3 {
+            font-size: 17px;
+            margin-bottom: 10px;
+            color: #1b2a6b;
+        }
+        .step-card p {
+            color: #5a6a85;
+            font-size: 14px;
+        }
+        /* FAQ */
+        .faq-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: #fff;
+            border-radius: 14px;
+            padding: 24px 28px;
+            margin-bottom: 16px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+            border-left: 4px solid #2d4a9e;
+        }
+        .faq-item h3 {
+            font-size: 18px;
+            color: #1a1e2c;
+            margin-bottom: 10px;
+        }
+        .faq-item p {
+            color: #3d4a63;
+            font-size: 15px;
+        }
+        /* 注意事项 */
+        .notice-box {
+            background: #fff7ed;
+            border: 1px solid #fed7aa;
+            border-radius: 16px;
+            padding: 28px 32px;
+            margin-top: 40px;
+        }
+        .notice-box h3 {
+            color: #9a3412;
+            font-size: 20px;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .notice-list {
+            list-style: none;
+        }
+        .notice-list li {
+            padding: 8px 0 8px 30px;
+            position: relative;
+            color: #3d3a3a;
+        }
+        .notice-list li::before {
+            content: '⚠️';
+            position: absolute;
+            left: 0;
+            top: 8px;
+        }
+        /* 页脚 */
+        .site-footer {
+            background: #151e38;
+            color: #9aa8c7;
+            padding: 40px 0 20px;
+            margin-top: 40px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .footer-col h4 {
+            color: #ffffff;
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+        .footer-col a {
+            display: block;
+            color: #9aa8c7;
+            text-decoration: none;
+            padding: 5px 0;
+            font-size: 14px;
+        }
+        .footer-col a:hover {
+            color: #ffb347;
+        }
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #2a3550;
+            padding-top: 20px;
+            font-size: 14px;
+        }
+        /* 响应式 */
+        @media (max-width: 900px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-title {
+                font-size: 30px;
+            }
+            .main-nav {
+                width: 100%;
+                margin-top: 12px;
+            }
+            .main-nav ul {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 12px 20px;
+            }
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 0 14px;
+            }
+            .hero-title {
+                font-size: 26px;
+            }
+            .btn-download, .btn-info {
+                padding: 12px 24px;
+                font-size: 16px;
+            }
+            .section {
+                padding: 35px 0;
+            }
+            .section-title {
+                font-size: 24px;
+            }
+            .header-inner {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .logo-area {
+                justify-content: center;
+            }
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo-area">
+                <div class="logo-icon">P</div>
+                <span class="logo-text">PicACG</span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#features">核心功能</a></li>
+                    <li><a href="#download">下载方式</a></li>
+                    <li><a href="#guide">安装步骤</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                    <li><a href="#notice">安全提醒</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 首屏横幅 -->
+        <section class="hero-section">
+            <div class="container hero-grid">
+                <div>
+                    <h1 class="hero-title">PicACG官方下载<br>享受高清漫画阅读体验</h1>
+                    <p class="hero-sub">PicACG（哔咔漫画）是一款专注于二次元漫画阅读的应用，提供丰富的漫画资源与舒适的阅读界面。本页面为PicACG官方下载入口，提供最新版本获取方式、安装指引及详细使用说明。</p>
+                    <div class="btn-group">
+                        <a href="#download" class="btn-download">📥 获取最新版</a>
+                        <a href="#guide" class="btn-info">查看安装指南</a>
+                    </div>
+                </div>
+                <div class="hero-card">
+                    <div class="version-tag">v3.2.8 · 最新版</div>
+                    <h3>📱 支持 Android</h3>
+                    <p>版本大小约 28MB<br>兼容 Android 8.0 及以上系统</p>
+                    <div class="card-meta">更新日期：2025年6月 · 安全稳定版</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 快捷信息条 -->
+        <div class="feature-strip">
+            <div class="container strip-grid">
+                <div class="strip-item"><span class="strip-icon">🔒</span> 官方正版渠道</div>
+                <div class="strip-item"><span class="strip-icon">⚡</span> 极速下载体验</div>
+                <div class="strip-item"><span class="strip-icon">🔄</span> 持续版本更新</div>
+                <div class="strip-item"><span class="strip-icon">🛡️</span> 安全无广告插件</div>
+            </div>
+        </div>
+
+        <!-- 核心功能 -->
+        <section class="section" id="features">
+            <div class="container">
+                <h2 class="section-title">PicACG 核心功能亮点</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3><span class="feature-icon">📚</span> 海量漫画资源</h3>
+                        <p>涵盖少年、少女、青年、百合、耽美等多种分类，每日更新热门作品与经典漫画，满足不同读者的喜好。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3><span class="feature-icon">✨</span> 高清阅读引擎</h3>
+                        <p>针对不同尺寸屏幕优化渲染，支持双页横屏、卷纸模式，图片加载流畅，细节清晰可见。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3><span class="feature-icon">🔖</span> 智能书架管理</h3>
+                        <p>自动记录阅读进度，支持收藏、历史记录、离线下载，多设备同步，让追漫更轻松。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3><span class="feature-icon">🎨</span> 个性化界面</h3>
+                        <p>提供日间/夜间模式、自定义背景色、翻页动画调节，打造专属的舒适阅读环境。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3><span class="feature-icon">💬</span> 社区互动</h3>
+                        <p>每部漫画都有评论区，可以分享感想、推荐作品，与同好交流，发现更多优质内容。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3><span class="feature-icon">🔔</span> 更新提醒</h3>
+                        <p>关注的作品有新章节时会及时推送通知，不再错过任何一话的更新。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 下载区域 -->
+        <section class="section steps-section" id="download">
+            <div class="container">
+                <h2 class="section-title">PicACG官方下载方式</h2>
+                <p style="margin-bottom:30px; max-width:800px;">为确保下载到安全、完整的PicACG应用，建议优先通过官方网站或官方公告中提供的链接进行下载。请勿随意点击来源不明的下载地址，以免设备受到恶意软件侵害。</p>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-num">1</div>
+                        <h3>访问官方渠道</h3>
+                        <p>打开PicACG官方网站，找到下载专区，或关注官方社交媒体账号获取最新下载链接。</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-num">2</div>
+                        <h3>选择正确版本</h3>
+                        <p>根据设备系统（Android / iOS）选择对应安装包。Android用户下载APK文件，iOS用户通过TestFlight或官方商店获取。</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-num">3</div>
+                        <h3>完成安装</h3>
+                        <p>下载完成后点击安装。若系统提示“未知来源”，请在设置中允许本次安装，安装完成后即可启动。</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-num">4</div>
+                        <h3>注册登录</h3>
+                        <p>首次使用需注册账号或使用第三方授权登录，登录后即可开始浏览和阅读漫画。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 安装与使用指南 -->
+        <section class="section" id="guide">
+            <div class="container">
+                <h2 class="section-title">安装与使用指南</h2>
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="feature-item" style="background:#f9faff;">
+                        <h3>Android 安装说明</h3>
+                        <p>1. 下载APK文件后，点击文件开始安装。<br>2. 若提示“禁止安装未知应用”，请前往系统设置开启“允许此来源”权限。<br>3. 安装完成后，建议在应用内检查更新，以保持版本最新。<br>4. 如遇解析包错误，请重新下载并确认文件完整性。</p>
+                    </div>
+                    <div class="feature-item" style="background:#f9faff;">
+                        <h3>iOS 安装说明</h3>
+                        <p>1. 目前iOS版通过TestFlight进行测试分发。<br>2. 需要先在App Store安装TestFlight应用。<br>3. 通过官方邀请链接加入测试计划即可安装。<br>4. 每个测试版本有效期约90天，到期后需更新新版本。</p>
+                    </div>
+                    <div class="feature-item" style="background:#f9faff;">
+                        <h3>使用小贴士</h3>
+                        <p>• 遇到图片加载缓慢时，可切换至Wi-Fi环境或使用内置加速功能。<br>• 书架支持云备份，更换设备后登录账号即可恢复数据。<br>• 在“设置”中可调整缓存大小，优化存储空间。<br>• 部分漫画因版权原因可能仅限特定地区阅读，请遵守当地法律法规。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 常见问题 -->
+        <section class="section" id="faq">
+            <div class="container">
+                <h2 class="section-title">用户常见问题解答</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>Q1：PicACG官方下载是免费的吗？</h3>
+                        <p>PicACG应用本身提供免费下载和使用，但应用内部分漫画或高级功能可能需要付费或使用虚拟货币解锁。请以应用内实际规则为准。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Q2：如何确认下载的是官方正版？</h3>
+                        <p>建议只从官方网站、官方GitHub仓库或官方公告中提供的链接下载。不要轻信第三方网站或论坛的“破解版”“无限金币版”等，以免带来安全风险。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Q3：安装时提示“病毒”或“风险”怎么办？</h3>
+                        <p>部分安卓手机系统对非应用商店下载的应用会进行安全提示。如果从官方渠道下载，可点击“仍然安装”继续。如果是从其他来源下载，建议立即停止安装并删除文件。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Q4：下载速度很慢如何解决？</h3>
+                        <p>可以尝试更换网络环境、使用下载工具，或者选择非高峰时段下载。另外检查设备存储空间是否充足，避免因空间不足导致下载中断。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Q5：应用频繁闪退怎么办？</h3>
+                        <p>先尝试重启应用或设备，清除应用缓存。如果问题依旧，可能是版本兼容性问题，建议升级至最新版本，或向官方反馈具体的设备型号和系统版本。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Q6：是否支持电脑端使用？</h3>
+                        <p>官方目前主要提供移动端应用。部分用户会使用Android模拟器在电脑上运行，但体验可能不如原生移动端流畅。建议优先使用手机或平板设备。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 安全提醒 -->
+        <section class="section" id="notice">
+            <div class="container">
+                <div class="notice-box">
+                    <h3>🔔 重要安全提示</h3>
+                    <ul class="notice-list">
+                        <li>请务必通过PicACG官方渠道下载应用，非官方版本可能存在恶意代码、广告插件或隐私窃取风险。</li>
+                        <li>不要向任何第三方提供您的账号密码，官方不会以任何理由索要您的登录凭证。</li>
+                        <li>安装应用时注意观察权限申请，如非必要权限被申请，请谨慎授权。</li>
+                        <li>本页面仅提供下载指引，不直接托管安装文件，具体下载请跳转至官方页面操作。</li>
+                        <li>定期关注PicACG官方公告，了解版本更新及安全动态。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>PicACG 导航</h4>
+                    <a href="#features">核心功能</a>
+                    <a href="#download">下载中心</a>
+                    <a href="#guide">使用指南</a>
+                    <a href="#faq">帮助中心</a>
+                </div>
+                <div class="footer-col">
+                    <h4>相关资源</h4>
+                    <a href="#">官方社区</a>
+                    <a href="#">更新日志</a>
+                    <a href="#">版本历史</a>
+                    <a href="#">意见反馈</a>
+                </div>
+                <div class="footer-col">
+                    <h4>友情提示</h4>
+                    <p style="font-size:14px; line-height:1.7;">请支持正版漫画，合理消费。本页面为技术交流用途，请在符合当地法律的前提下使用相关应用。</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 PicACG信息站 · 本页仅为使用指南，非官方页面 · 请以官方发布为准</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
